@@ -12,7 +12,7 @@
 	<style>
 		.ui.shape{
 			padding-top:2%;
-			padding-left:20%;
+			padding-left:18%;
 		max-width:1200px;padding-bottom:5%;
 		}
 		.sides{
@@ -21,6 +21,9 @@
 		/* .ui.red.button{
 			padding-bottom:5%;
 		} */
+		.ui.large.image{
+			width:500%;
+		}
 	</style>
     <body>
 			<div id="navb" class="ui secondary inverted fixed main menu">
@@ -128,42 +131,63 @@ Ahmedabad University was established in 2009 by the Ahmedabad Education Society 
       <li></li>
       <li></li>
 	</ul>
-		<div class="ui shape">
+		
+		<div class="ui cube shape">
+			<hr>
   <div class="sides">
     <div class="active ui  side">
     <!-- <div class="ui raised segment"> -->
             <img src="
-https://ohcampus.com/uploads/college/SCS6402868001.jpg" class="ui large image"></div>
+https://farm66.static.flickr.com/65535/49654845631_b949668302_b.jpg" class="ui large image"></div>
     <div class="side">
     	<!-- <div class="ui raised segment"> -->
-  <img src="https://pbs.twimg.com/media/EL7KdTGVUAAGG1W.jpg" class="ui large image"></div>
+  <img src="https://farm66.static.flickr.com/65535/49654845781_261f6e4252_b.jpg" class="ui large image"></div>
     <div class="side">
-          <img class="ui large image" src="https://divisare-res.cloudinary.com/images/c_limit,f_auto,h_2000,q_auto,w_3000/v1455599434/hxwywguibxxcm5ksnpv7/vir-mueller-architects-iet-ahmedabad-university.jpg"></div>
-  </div>
-			<div class="ui red button" id="flip-left">left</div>
-			<div class="ui red button" id="flip-right">right</div>
-			<div class="ui red button" id="flip-up">up</div>
-			<div class="ui red button" id="flip-down">down</div>
+          <img class="ui huge image" src="https://farm66.static.flickr.com/65535/49655124472_61952fbbe3_b.jpg"></div>
+  
+			    <div class="side">
+          <img class="ui huge image" src="https://farm66.static.flickr.com/65535/49655124062_397d45076a_b.jpg"></div>
+  
+		    <div class="side">
+          <img class="ui huge image" src="https://farm66.static.flickr.com/65535/49654305893_b3300b4cc9_b.jpg"></div>
+		</div>
+			<hr>
+			<!-- <div class="ui fixed red button" id="flip-left">Start</div> -->
+			<!-- <div class="ui fixed red button" id="flip-right">right</div>
+			<div class="ui fixed red button" id="flip-up">up</div>
+			<div class="ui fixed red button" id="flip-down">down</div> -->
 </div>
 
 
 <script>
 
 	
-$('#flip-right').click(function(){
-		$('.ui.shape').shape('flip right');
-		});
-	$('#flip-left').click(function(){
-		$('.ui.shape').shape('flip left');
-		});
-		$('#flip-down').click(function(){
-		$('.ui.shape').shape('flip down');
-		});
-		$('#flip-up').click(function(){
-		$('.ui.shape').shape('flip up');
-		});
-	
-	
+// $('#flip-right').click(function(){
+// 		$('.ui.shape').shape('flip right');
+// 		});
+// 	$('#flip-left').click(function(){
+// 		$('.ui.shape').shape('flip left');
+// 		});
+// 		$('#flip-down').click(function(){
+// 		$('.ui.shape').shape('flip down');
+// 		});
+// 		$('#flip-up').click(function(){
+// 		$('.ui.shape').shape('flip up');
+// 		});
+	setInterval( "shape()", 6000 );
+
+function shape()
+{
+  
+  		$($('.ui.shape').shape('flip right')).delay("slow").fadeIn();
+
+};
+// 	$('#flip-left').click(function(){
+//   		$($('.ui.shape').shape('flip right')).delay(4000).fadeIn();
+// 	    $($('.ui.shape').shape('flip left')).delay(4000).fadeIn();
+// 		$($('.ui.shape').shape('flip down')).delay(4000).fadeIn();
+// 		$($('.ui.shape').shape('flip up')).delay(4000).fadeIn();
+// });
 
         $(function () {
             $(document).scroll(function () {
@@ -171,7 +195,7 @@ $('#flip-right').click(function(){
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
             });
         });
-        
+    
 </script>
 
 
