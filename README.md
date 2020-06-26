@@ -70,7 +70,7 @@ Usage:
 
 Roadmap
   1)Currently working on GoormIDE,have plans to Deploy it on Heroku in future
-  2)Deploying local database to Mongolab (Cureenlty using local mongo)
+  2)Deploying local database to Mongolab (Currenlty using local mongo)
   3)Currenly using passport for authentication, plans to change that too
    
    
