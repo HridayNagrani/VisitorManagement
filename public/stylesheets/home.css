@@ -120,6 +120,10 @@ h1{
 .ui.re.button{
 	z-index:1;
 }
-.ui.shape{
-	padding-left:40%;
+.ui.cube.shape{
+	padding-left:20%;
+}
+.ui.shape .active.side {
+	padding-bottom:54%;
+	background:black;
 }
