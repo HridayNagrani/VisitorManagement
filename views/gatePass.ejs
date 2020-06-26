@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>GatePassVerification</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" >
+	</head>
+
+<style>
+    body > .grid {
+      height: 100%;
+    }
+	#headingF{
+		padding-left:15%;
+	}
+    .column {
+      max-width: 600px;
+		margin-top:50px;
+    }
+	  .ui.image img, .ui.image svg {
+		  margin-left: 100px;
+		  margin-bottom:20px;
+	  }
+	  .ui.stacked.segment{
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	  }
+	body{
+background: teal;
+}
+	.ui.inverted.segment {
+	width:50%;
+	}
+</style>
+
+			   <section id="sec" class=" container-inverted px-1">
+			   <h1 id="headingF">
+				  GatePass Approval
+			   </h1>
+		<form action="/gatepass/<%=id%>"+ method="POST" class="ui inverted form">
+<div class="ui container">
+<div class="ui inverted small segment">
+    <div class="two fields">
+      <div class="field">
+        <label>Gate No:</label>
+              <div class="ui form">
+                    <div class="field">
+<input type="text" name="gateno" placeholder="gateno">
+                    </div>
+              </div>
+      </div>
+
+    </div>
+    <div class="inline field">
+      <div class="ui teal checkbox">
+        <input type="checkbox" tabindex="0" name="ch" >
+        <label>Allow Visiter</label>
+      </div>
+    </div>
+	
+    <input class="ui inverted teal button" type="submit">
+ 
+	</div> 
+</div>
+</form>
+	</div>
+</div>
+</div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,252 @@
+<%- include("partials/header") %>
+<h1>
+	CheckOut!!
+</h1>
+<style>
+	#space{
+		padding-right:3%;
+		color:white;
+		width:30%;
+	}
+
+    body > .grid {
+      height: 100%;
+    }
+  
+    .column {
+      max-width: 600px;
+		margin-top:50px;
+    }
+	  .ui.image img, .ui.image svg {
+		  margin-left: 100px;
+		  margin-bottom:20px;
+	  }
+	  .ui.stacked.segment{
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	  }
+	body{
+background: #fffbd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+	.ui.large.form{
+	max-width:150%;
+	}
+</style>
+<div class="ui container">
+	
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="ui cyan icon header">
+		   <img id="iconAU" src="https://ahduni.edu.in/assets/images/favicon.png"> 
+		  <p>
+			  Checkout Form
+		  </p>
+		</div>
+    </h2>
+	  <h2>
+		  Feedback Form
+	  </h2>
+	   <form action="/checkout/<%=id%>" method="POST" class="ui inverted large form">
+	 <div class="ui stacked segment">
+
+        <div class="field">
+          <div class="ui left icon input">
+     			<p id="space">
+					Campus Design/Infra:     
+			  </p>
+        	<div class="inline fields">
+			  <div class="field">
+				  <div class="ui radio checkbox">
+					<input type="radio" name="a"  tabindex="0" value="1">
+					<label>1</label>
+      			  </div>
+    		  </div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="a" tabindex="0" value="2" >
+				<label>2</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="a" tabindex="0" value="3">
+				<label>3</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="a" tabindex="0" value="4" >
+				<label>4</label>
+			  </div>
+			</div>
+					  <div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="a" tabindex="0" value="5">
+				<label>5</label>
+			  </div>
+			</div>
+  </div>
+			  
+          </div>
+			        <div class="field">
+          <div class="ui left icon input">
+     			<p id="space">
+					Cleanliness    
+			  </p>
+        	<div class="inline fields">
+			  <div class="field">
+				  <div class="ui radio checkbox">
+					<input type="radio" name="b"  tabindex="0" value="1">
+					<label >1</label>
+      			  </div>
+    		  </div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="b" tabindex="0" value="2">
+				<label >2</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="b" tabindex="0" value="3">
+				<label >3</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="b" tabindex="0" value="4">
+				<label >4</label>
+			  </div>
+			</div>
+					  <div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="b" tabindex="0" value="5">
+				<label >5</label>
+			  </div>
+			</div>
+  </div>
+			  
+          </div>
+						        <div class="field">
+          <div class="ui left icon input">
+     			<p id="space">
+					Campuss Staff:    
+			  </p>
+        	<div class="inline fields">
+			  <div class="field">
+				  <div class="ui radio checkbox">
+					<input type="radio" name="c"  tabindex="0" value="1">
+					<label >1</label>
+      			  </div>
+    		  </div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="c" tabindex="0" value="2">
+				<label >2</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="c" tabindex="0" value="3">
+				<label >3</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="c" tabindex="0"  value="4">
+				<label>4</label>
+			  </div>
+			</div>
+					  <div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="c" tabindex="0"  value="5">
+				<label>5</label>
+			  </div>
+			</div>
+  </div>
+			  
+          </div>
+									        <div class="field">
+          <div class="ui left icon input">
+     			<p id="space">
+					Visiter Management Website  
+			  </p>
+        	<div class="inline fields">
+			  <div class="field">
+				  <div class="ui radio checkbox">
+					<input type="radio" name="d"  tabindex="0"  value="1">
+					<label>1</label>
+      			  </div>
+    		  </div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="d" tabindex="0" value="2">
+				<label>2</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="d" tabindex="0" value="3">
+				<label>3</label>
+			  </div>
+			</div>
+			<div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="d" tabindex="0" value="4">
+				<label >4</label>
+			  </div>
+			</div>
+					  <div class="field">
+			  <div class="ui radio checkbox">
+				<input type="radio" name="d" tabindex="0" value="5">
+				<label >5</label>
+			  </div>
+			</div>
+  </div>
+			  
+          </div>
+  
+			  
+          </div>
+        </div>
+		 <div class="field">
+          <div class="ui left icon input">
+            <p id="space">
+				General Feedback/Suggestions:
+			  </p>
+            <textarea name="txfeedback">		  
+			  </textarea>
+          </div>
+        </div>
+					   <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="time" name="Time" placeholder="Exit Time" required>
+          </div>
+        </div>
+					   <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="gate" placeholder="Exit Gate" required>
+          </div>
+        </div>
+	
+        </div>
+		 	<input class="ui inverted fluid big teal button" type="submit">
+		     <div class="ui message">
+      Already Registered? <a href="/users/login">log in here...</a>
+    </div>
+ </div>
+		
+		</form>
+	</div>
+</div>
+</div>
+
+<%- include("partials/footer") %>

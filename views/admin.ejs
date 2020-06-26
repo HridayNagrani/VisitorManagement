@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- jQuery     -->
+	  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	  
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Semantic Ui     -->
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" >
+	  
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="app.css"> -->
+   <link rel="stylesheet" href="/stylesheets/main.css">
+ <title>eum of Candy</title>
+		<style>
+	body{
+			background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	}
+			.ui.big.image{
+	padding-top:1%;
+			}
+			#admin1{
+				padding-left;
+				
+			}.ui.items>.item {
+					
+					font-size: 2.5em;
+				}
+			.ui.grid{
+				margin:1rem;
+			}
+	  </style>
+  </head>
+  
+  <body>
+	  <div class="ui center aligned grid">
+	  <div class="ui items">
+  <div class="item">
+    <div class="ui tiny image">
+    	<img  src="https://ahduni.edu.in/assets/images/favicon.png">
+    </div>
+    <div class="middle aligned content">
+      <h1 id="admin1"class="huge header"> Admin Page</h1>
+     
+    </div>
+  </div>
+		  </div></div>
+
+	  
+		  <!-- <div id="msg" class="ui inverted message">
+		  
+		  <div class="header">
+			  <i id ="ic" class="close large red icon"></i>
+			Welcome to Ahmedabad University
+		  </div>
+		</div> -->
+<!-- 
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+      <a href="#" class="navbar-brand">CANDY</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navLins" aria-lable="Toggle Naviation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLins">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="" class="nav-link">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">TICKETS</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+
+ -->
+<table class="ui inverted black sortable celled table">
+		<h1 class="ui huge header">
+		User Details
+	</h1>
+  <thead >
+    <tr><th>USERNAME</th>
+    <th>NAME</th>
+    <th>BRANCH</th>
+	<th>UserID</th>	
+  </tr></thead>
+	  
+    <tbody>
+		<% User.forEach(function(datad){
+			if(datad.username!=="admin@admin"){%>
+    <tr>
+      <td data-label="USERNAME"> <%= datad.username %></td>
+      <td data-label="NAME"><%= datad.name %></td>
+      <td data-label="BUILDING">  <%= datad.building %></td>
+	  <td data-label="UserID">  <%= datad._id %></td>
+		
+    </tr>
+    <% }}) %>
+  </tbody>
+	
+</table>
+    
+
+<table class="ui inverted black sortable celled table">
+		<h1 class="ui huge header">
+		Visiting Information
+	</h1>
+  <thead>
+    <tr><th>Building</th>
+    <th>GateNo</th>
+    <th>Date</th>	
+	<th>Allowance</th>
+	<th>NumberOfVisitors</th>
+	<th>UserID</th>
+
+  </tr></thead>
+	  
+    <tbody>
+		<% Visit.forEach(function(datad){ %>
+    <tr>
+      <td data-label="Building"> <%= datad.build %></td>
+      <td data-label="GateNo"><%= datad.gateNum %></td>
+      <td data-label="Date">  <%= datad.date %></td>
+	  <td data-label="Allowance">  <%= datad.isAllowed %></td>
+	  <td data-label="NumberOfVisitors">  <%=datad.numberOfVisitors %></td>
+	  <td data-label="UserID">  <%=datad.user.id %></td>
+
+    </tr>
+    <% }) %>
+  </tbody>
+	
+</table>
+  
+<table class="ui sortable inverted black celled table">
+		<h1 class="ui huge header">
+		User Feedback
+	</h1>
+  <thead>
+    <tr><th>CampusDesign</th>
+    <th>Cleanliness</th>	
+	<th>Staff</th>
+	<th>VSMWebsite</th>
+	<th>GeneralFeedback</th>
+	<th>CheckOutTime</th>
+	<th>ExitGate</th>	
+	<th>UserId</th>	
+  </tr></thead>
+	  
+    <tbody>
+		<% Feedback.forEach(function(datad){ %>
+    <tr>
+      <td data-label="CampusDesign"> <%= datad.camDes %></td>
+      <td data-label="Cleanliness"><%= datad.clean %></td>
+      <td data-label="Staff">  <%= datad.staff %></td>
+	  <td data-label="VSMWebsite">  <%= datad.VSM %></td>
+	  <td data-label="GeneralFeedback">  <%= datad.GF%></td>
+	  <td data-label="CheckOutTime">  <%= datad.checkOutTime %></td>
+	  <td data-label="ExitGate">  <%= datad.egate %></td>
+	  <td data-label="UserID">  <%=datad.id %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+	
+</table>
+ 
+	  
+	<script>
+	
+	(function($) {
+	$.tablesort = function ($table, settings) {
+		var self = this;
+		this.$table = $table;
+		this.$thead = this.$table.find('thead');
+		this.settings = $.extend({}, $.tablesort.defaults, settings);
+		this.$sortCells = this.$thead.length > 0 ? this.$thead.find('th:not(.no-sort)') : this.$table.find('th:not(.no-sort)');
+		this.$sortCells.on('click.tablesort', function() {
+			self.sort($(this));
+		});
+		this.index = null;
+		this.$th = null;
+		this.direction = null;
+	};
+
+	$.tablesort.prototype = {
+
+		sort: function(th, direction) {
+			var start = new Date(),
+				self = this,
+				table = this.$table,
+				rowsContainer = table.find('tbody').length > 0 ? table.find('tbody') : table,
+				rows = rowsContainer.find('tr').has('td, th'),
+				cells = rows.find(':nth-child(' + (th.index() + 1) + ')').filter('td, th'),
+				sortBy = th.data().sortBy,
+				sortedMap = [];
+
+			var unsortedValues = cells.map(function(idx, cell) {
+				if (sortBy)
+					return (typeof sortBy === 'function') ? sortBy($(th), $(cell), self) : sortBy;
+				return ($(this).data().sortValue != null ? $(this).data().sortValue : $(this).text());
+			});
+			if (unsortedValues.length === 0) return;
+
+			//click on a different column
+			if (this.index !== th.index()) {
+				this.direction = 'asc';
+				this.index = th.index();
+			}
+			else if (direction !== 'asc' && direction !== 'desc')
+				this.direction = this.direction === 'asc' ? 'desc' : 'asc';
+			else
+				this.direction = direction;
+
+			direction = this.direction == 'asc' ? 1 : -1;
+
+			self.$table.trigger('tablesort:start', [self]);
+			self.log("Sorting by " + this.index + ' ' + this.direction);
+
+			// Try to force a browser redraw
+			self.$table.css("display");
+			// Run sorting asynchronously on a timeout to force browser redraw after
+			// `tablesort:start` callback. Also avoids locking up the browser too much.
+			setTimeout(function() {
+				self.$sortCells.removeClass(self.settings.asc + ' ' + self.settings.desc);
+				for (var i = 0, length = unsortedValues.length; i < length; i++)
+				{
+					sortedMap.push({
+						index: i,
+						cell: cells[i],
+						row: rows[i],
+						value: unsortedValues[i]
+					});
+				}
+
+				sortedMap.sort(function(a, b) {
+					return self.settings.compare(a.value, b.value) * direction;
+				});
+
+				$.each(sortedMap, function(i, entry) {
+					rowsContainer.append(entry.row);
+				});
+
+				th.addClass(self.settings[self.direction]);
+
+				self.log('Sort finished in ' + ((new Date()).getTime() - start.getTime()) + 'ms');
+				self.$table.trigger('tablesort:complete', [self]);
+				//Try to force a browser redraw
+				self.$table.css("display");
+			}, unsortedValues.length > 2000 ? 200 : 10);
+		},
+
+		log: function(msg) {
+			if(($.tablesort.DEBUG || this.settings.debug) && console && console.log) {
+				console.log('[tablesort] ' + msg);
+			}
+		},
+
+		destroy: function() {
+			this.$sortCells.off('click.tablesort');
+			this.$table.data('tablesort', null);
+			return null;
+		}
+
+	};
+
+	$.tablesort.DEBUG = false;
+
+	$.tablesort.defaults = {
+		debug: $.tablesort.DEBUG,
+		asc: 'sorted ascending',
+		desc: 'sorted descending',
+		compare: function(a, b) {
+			if (a > b) {
+				return 1;
+			} else if (a < b) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+	};
+
+	$.fn.tablesort = function(settings) {
+		var table, sortable, previous;
+		return this.each(function() {
+			table = $(this);
+			previous = table.data('tablesort');
+			if(previous) {
+				previous.destroy();
+			}
+			table.data('tablesort', new $.tablesort(table, settings));
+		});
+	};
+
+})(window.Zepto || window.jQuery);	
+	 $('table').tablesort()
+	 </script>
+		
+ </body>
+</html>

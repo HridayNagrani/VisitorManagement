@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title> Checkout</title>
+			<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" >
+				<link rel="stylesheet" href="/stylesheets/main.css">
+	</head>
+<style>
+	.ui.inverted.teal.button{
+		margin-top:3%;
+	}
+	h1{
+		color:black;
+	}
+	body{
+background: #00416A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFE000, #799F0C, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFE000, #799F0C, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	}
+	#dow{
+		margin-top:0%;
+	}
+	</style>
+	<body>
+<h1>
+	<p id="p" >
+		This is your Gate-Pass <%=User.name%>.
+		<br>
+		Gate-No:<%=Visit.gateNum%>.
+	
+		<br>
+		Visiting Date-Time:<%=Visit.date.toLocaleString()%>.
+
+		<br>
+		Building:<%=Visit.build%>.
+
+
+	</p>
+	
+		</h1>
+<input type="button" id ="dow" value="Download" class="ui inverted teal button">
+	
+<div class="ui container">
+<form class="ui large form" action="/gates/<%=User._id%>" method="POST">
+	<div class="ui form">
+	  <div class="fields">
+    <div class="field">
+      <label>Gaurd Name</label>
+     <input type="text" name="gname" placeholder="guard name">
+	<div>
+		<input type="submit" class="ui inverted teal button">		
+	 </div>	
+    </div>
+	  
+		</div>
+	</div>
+	
+	</form>
+</div>
+		
+<a href="/checkout/<%=User.id%>">Pls Click here to give feedbaack after you complete the campus tour</a>
+
+
+<script>
+	
+	function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dow").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("p").textContent;
+    var filename = "gatepass.txt";
+    
+    download(filename, text);
+}, false);
+</script>
+		
+	</body>
+			</html>

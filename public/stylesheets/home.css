@@ -1,0 +1,125 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+#landing-header h1 {
+  z-index: 1;
+  color: #fff;
+}
+.icon-logo-ahmedabad-university:before {
+  content: "\e900";
+}
+
+#navbar1{
+  border:none;
+}
+
+.pr{
+	font-size:130%;
+	color:aquamarine;
+}
+.ui.inverted.green.button{
+	font-size:160%;
+}
+
+#more{
+	padding-left:1300px;
+}
+h1{
+	font-size:200px;
+}
+.ui.red.header{
+	font-size:280%;
+}
+#navb.scrolled {
+            background-color:black;
+          	transition: background 1400ms;
+}
+
+.landing-pg {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top:30px;
+  padding-left:280px;	
+  width:80%;
+  color:white; 
+}
+
+/* #landing-pg .paragraph{
+	background-color:gray;
+} */
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://ahduni.edu.in/assets/images/default/default14.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://images.adsttc.com/media/images/5645/3e2a/e58e/ce94/e500/020b/slideshow/Virmueller_Ahmedabad_11th_April_2015_%C2%A9_andr%C3%A9_j_fanthome0093b.jpg?1447378459);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://i.ytimg.com/vi/3i0_vXlzyBg/maxresdefault.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://pbs.twimg.com/media/EL7KdTGVUAAGG1W.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://www.bpcprojects.com/images/categories/8413811_DSC_0195.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+.ui.re.button{
+	z-index:1;
+}
+.ui.shape{
+	padding-left:40%;
+}
